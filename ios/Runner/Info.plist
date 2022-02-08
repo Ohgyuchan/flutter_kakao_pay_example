@@ -43,5 +43,27 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<!-- BOOTPAY API START -->
+	<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>kr.co.bootpaySample</string> // 사용하고자 하시는 앱의 bundle url name
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>bootpaySample</string> // 사용하고자 하시는 앱의 bundle url scheme
+            </array>
+        </dict>
+    </array>
+	<key>NSFaceIDUsageDescription</key>
+    <string>생체인증 결제 진행시 권한이 필요합니다</string>
+	<!-- BOOTPAY API END -->
 </dict>
 </plist>
