@@ -36,8 +36,8 @@ class TestPageState extends State<TestPage> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Container(
-          child: RaisedButton(
+        body: Center(
+          child: ElevatedButton(
             onPressed: () {
               goBootpayRequest(context);
             },
