@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 import 'package:bootpay_api/bootpay_api.dart';
 import 'package:bootpay_api/model/payload.dart';
 import 'package:bootpay_api/model/extra.dart';
@@ -14,7 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Test",
       home: TestPage(),
     );
   }
@@ -55,8 +51,8 @@ class TestPageState extends State<TestPage> {
     payload.androidApplicationId = '5b8f6a4d396fa665fdc2b5e8';
     payload.iosApplicationId = '5b8f6a4d396fa665fdc2b5e9';
 
-    payload.pg = 'undefined';
-    payload.method = 'undefined';
+    payload.pg = 'kcp';
+    payload.method = 'kakao';
 //  payload.methods = ['card', 'phone', 'vbank', 'bank'];
     payload.name = 'testUser';
     payload.price = 2000.0;
@@ -78,7 +74,7 @@ class TestPageState extends State<TestPage> {
     extra.appScheme = 'bootpaySample';
 
     Item item1 = Item();
-    item1.itemName = "미키 마우스"; // 주문정보에 담길 상품명
+    item1.itemName = "미키's 마우스"; // 주문정보에 담길 상품명
     item1.qty = 1; // 해당 상품의 주문 수량
     item1.unique = "ITEM_CODE_MOUSE"; // 해당 상품의 고유 키
     item1.price = 1000; // 상품의 가격
